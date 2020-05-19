@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Instuctional guide
+    </title>
+    
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(185, 185, 185);
+    background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+nav{
+    font-weight: bold;
+    padding: 0.5em;
+    font-size: 50px;
+    border-bottom: 0.4em solid red;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+.s1{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 30px;
+    padding: 25px;
+    background-color: rgb(241, 240, 240);
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom: 2px solid black line;
+}
+.body{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 30px;
+    padding: 25px;
+    background-color: white;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+}
+.title{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    font-size: 35px;
+    padding: 0.49em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    cursor: pointer;
+    outline: none;
+    border-color: none;
+}
+input{
+    font-size: 35px;
+    border-color: none;
+    padding: 0.5em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    outline: none;
+}
+.x{
+    border: 2em white;
+}
+video{
+    border-radius: 2em;
+    border: 1em solid white;
+    outline: none;
+}
+@media screen and (min-width:700px){
+    nav{
+        font-size: 60px;
+    }
+    .body{
+        font-size: 50px;
+        margin-left: 15%;
+    margin-right: 15%;
+    }
+    .title{
+        font-size: 55px;
+    }
+    button{
+        font-size: 45px;
+    }
+    input{
+        font-size: 45px;
+    }
+    .x{
+        height: 640px;
+        width: 640px;
+    }
+}
+</style>
+<body>
+    <br><br>
+    <div class ="s1">
+        <center>
+            <img src ="https://aths.ankabut.ac.ae/images/logo-top.png" height=200px;>
+        </center>
+    </div>
+    <div class = "body">
+    <br>
+        <div class ="title">
+            Important:
+        </div>
+        <br>
+        To get the instructional guide, type the subject's name. Type CA after a space for the first central assesment and CA2 for the second centeral assesment. 
+        <br><br>
+        Check the video at the bottom of this site for a visual representation.
+        <br><br>
+        <div class = "title">
+            Example: 
+        </div>
+        <br> 
+        <center>Physics CA </center>   
+    </div>
+    <br><br>
+    <center>
+    <input type="text" id="in" placeholder="Subject Name"><button onclick="start()">Open</button>
+    <br><br><br>
+</center>
+<br><br>
+<center>
+    <br><br>
+    <video width=80% controls>
+        <source src = "tutorial.mp4">
+    </video>
+    <br><br>
+</center>
+</body>
+<script>
+    function start(){
+        var input = document.getElementById('in').value;
+        var equal = input.toUpperCase() == "physics ca".toUpperCase();
+        if(equal == true){
+            window.open('physicsca.pdf')
+        }
+        var equal2 = input.toUpperCase() == "physics ca2".toUpperCase();
+        if(equal2 == true){
+            window.open('physicsca2.pdf')
+        }
+        var equal3 = input.toUpperCase() == "chemistry ca".toUpperCase();
+        if(equal3 == true){
+            window.open('chemistryca.pdf')
+        }
+        var equal4 = input.toUpperCase() == "chemistry ca2".toUpperCase();
+        if(equal4 == true){
+            window.open('chemistryca2.pdf')
+        }
+        
+        
+    }
+</script>
